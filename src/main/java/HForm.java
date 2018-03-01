@@ -30,13 +30,18 @@ public class HForm {
     }
 
     public double secondFormDownRound() {
-        if (c + d == 0) return 0.0;
+        if (c + d == 0.0) return 0.0;
         return secondForm() / (c + d);
     }
 
     public double firstFormTopRound() {
-        if (a + b == 0) return 0.0;
+        if (a + b == 0.0) return 0.0;
         return firstForm() / (a + b);
+    }
+
+    public double secondFormTopRound() {
+        if (a + b == 0.0) return 0.0;
+        return secondForm() / (a + b);
     }
 
     public HForm(double a, double b, double c, double d) {

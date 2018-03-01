@@ -79,7 +79,17 @@ public class HFormTest {
 
     @Test
     public void testFirstFormTopRoundNotZero() {
-        assertThat(hForm1.firstFormTopRound()).isEqualTo(-200.0/30.0);
+        assertThat(hForm1.firstFormTopRound()).isEqualTo(-200.0 / 30.0);
+    }
+
+    @Test
+    public void testSecondFormTopRoundZero() {
+        assertThat(hForm0.secondFormTopRound()).isEqualTo(0.0);
+    }
+
+    @Test
+    public void testSecondFormTopRoundNotZero() {
+        assertThat(hForm1.secondFormTopRound()).isEqualTo(1100.0 / 30.0);
     }
 
 
