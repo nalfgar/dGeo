@@ -1,4 +1,5 @@
 public class HForm {
+    private static final double ZERO = 0.0;
     private double a;
     private double b;
     private double c;
@@ -16,38 +17,56 @@ public class HForm {
 
     //    Complementary forms
     public double zeroForm() {
-        if (secondForm() == 0.0) return 0.0;
+        if (secondForm() == ZERO) return ZERO;
         return firstForm() / secondForm();
     }
 
     public double firstFormDownRound() {
         double denominator = c + d;
-        if (denominator == 0.0) return 0.0;
+        if (denominator == ZERO) return ZERO;
         return firstForm() / denominator;
     }
 
     public double secondFormDownRound() {
         double denominator = c + d;
-        if (denominator == 0.0) return 0.0;
+        if (denominator == ZERO) return ZERO;
         return secondForm() / denominator;
     }
 
     public double firstFormTopRound() {
         double denominator = a + b;
-        if (denominator == 0.0) return 0.0;
+        if (denominator == ZERO) return ZERO;
         return firstForm() / denominator;
     }
 
     public double secondFormTopRound() {
         double denominator = a + b;
-        if (denominator == 0.0) return 0.0;
+        if (denominator == ZERO) return ZERO;
         return secondForm() / denominator;
     }
 
     public double firstFormDownSquare() {
         double denominator = (c * c) + (d * d);
-        if (denominator == 0.0) return 0.0;
+        if (denominator == ZERO) return ZERO;
         return firstForm() / denominator;
+    }
+
+    public double secondFormDownSquare() {
+        double denominator = (c * c) + (d * d);
+        if (denominator == ZERO) return ZERO;
+        return secondForm() / denominator;
+    }
+
+    public double firstFormTopSquare() {
+        double denominator = (a * a) + (b * b);
+        if (denominator == ZERO) return ZERO;
+        return firstForm() / denominator;
+    }
+
+    public double secondFormTopSquare() {
+        double denominator = (a * a) + (b * b);
+        if (denominator == ZERO) return ZERO;
+        return secondForm() / denominator;
     }
 
     public HForm(double a, double b, double c, double d) {

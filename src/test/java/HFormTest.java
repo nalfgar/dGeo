@@ -99,8 +99,37 @@ public class HFormTest {
 
     @Test
     public void testFirstFormDownSquareNotZero() {
-        assertThat(hForm1.firstFormDownSquare()).isEqualTo(-200.0 / (900 + 1600));
+        assertThat(hForm1.firstFormDownSquare()).isEqualTo(-200.0 / (900.0 + 1600.0));
     }
 
+    @Test
+    public void testSeconfFormDownSquareZero() {
+        assertThat(hForm0.secondFormDownSquare()).isEqualTo(0.0);
+    }
+
+    @Test
+    public void testSeconfFormDownSquareNotZero() {
+        assertThat(hForm1.secondFormDownSquare()).isEqualTo(1100.0 / (900.0 + 1600.0));
+    }
+
+    @Test
+    public void testFirstFormTopSquareZero() {
+        assertThat(hForm0.firstFormTopSquare()).isEqualTo(0.0);
+    }
+
+    @Test
+    public void testFirstFormTopSquareNotZero() {
+        assertThat(hForm1.firstFormTopSquare()).isEqualTo(-200.0 / (100 + 400));
+    }
+
+    @Test
+    public void testSecondFormTopSquareZero() {
+        assertThat(hForm0.secondFormTopSquare()).isEqualTo(0.0);
+    }
+
+    @Test
+    public void testSecondFormTopSquareNotZero() {
+        assertThat(hForm1.secondFormTopSquare()).isEqualTo(1100.0/(100+400));
+    }
 
 }
