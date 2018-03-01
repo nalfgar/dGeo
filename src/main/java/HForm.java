@@ -1,7 +1,3 @@
-import lombok.Data;
-
-
-@Data
 public class HForm {
     private double a;
     private double b;
@@ -25,23 +21,33 @@ public class HForm {
     }
 
     public double firstFormDownRound() {
-        if (c + d == 0.0) return 0.0;
-        return firstForm() / (c + d);
+        double denominator = c + d;
+        if (denominator == 0.0) return 0.0;
+        return firstForm() / denominator;
     }
 
     public double secondFormDownRound() {
-        if (c + d == 0.0) return 0.0;
-        return secondForm() / (c + d);
+        double denominator = c + d;
+        if (denominator == 0.0) return 0.0;
+        return secondForm() / denominator;
     }
 
     public double firstFormTopRound() {
-        if (a + b == 0.0) return 0.0;
-        return firstForm() / (a + b);
+        double denominator = a + b;
+        if (denominator == 0.0) return 0.0;
+        return firstForm() / denominator;
     }
 
     public double secondFormTopRound() {
-        if (a + b == 0.0) return 0.0;
-        return secondForm() / (a + b);
+        double denominator = a + b;
+        if (denominator == 0.0) return 0.0;
+        return secondForm() / denominator;
+    }
+
+    public double firstFormDownSquare() {
+        double denominator = (c * c) + (d * d);
+        if (denominator == 0.0) return 0.0;
+        return firstForm() / denominator;
     }
 
     public HForm(double a, double b, double c, double d) {
