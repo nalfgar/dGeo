@@ -14,29 +14,30 @@ public class HForm {
         return (a * d) - (b * c);
     }
 
-
     public double secondForm() {
         return (a * c) + (b * d);
     }
 
     //    Complementary forms
     public double zeroForm() {
-        if (secondForm() == 0.0) {
-            return 0.0;
-        }
+        if (secondForm() == 0.0) return 0.0;
         return firstForm() / secondForm();
     }
 
     public double firstFormDownRound() {
-        if (c + d == 0.0) {
-            return 0.0;
-        }
+        if (c + d == 0.0) return 0.0;
         return firstForm() / (c + d);
     }
 
+    public double secondFormDownRound() {
+        if (c + d == 0) return 0.0;
+        return secondForm() / (c + d);
+    }
 
-
-
+    public double firstFormTopRound() {
+        if (a + b == 0) return 0.0;
+        return firstForm() / (a + b);
+    }
 
     public HForm(double a, double b, double c, double d) {
         this.a = a;
@@ -60,4 +61,6 @@ public class HForm {
     public double getD() {
         return d;
     }
+
+
 }

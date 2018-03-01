@@ -9,14 +9,13 @@ public class HFormTest {
     private HForm hForm1;
 
     @Before
-    public void setup(){
+    public void setup() {
         hForm0 = new HForm(0.0, 0.0, 0.0, 0.0);
         hForm1 = new HForm(10.0, 20.0, 30.0, 40.0);
     }
 
     @Test
     public void testConstructor() {
-
 
         assertThat(hForm0.getA()).isEqualTo(0.0);
         assertThat(hForm0.getB()).isEqualTo(0.0);
@@ -26,39 +25,63 @@ public class HFormTest {
 
 
     @Test
-    public void testGetFirstForm() {
+    public void testFirstForm() {
 
         assertThat(hForm1.firstForm()).isEqualTo(-200.0);
     }
 
     @Test
-    public void testGetSecondForm() {
+    public void testSecondForm() {
 
         assertThat(hForm1.secondForm()).isEqualTo(1100.0);
     }
 
     @Test
-    public void testGetZeroFormZero() {
+    public void testZeroFormZero() {
 
         assertThat(hForm0.zeroForm()).isEqualTo(0.0);
     }
 
     @Test
-    public void testGetZeroFormNotZero() {
+    public void testZeroFormNotZero() {
 
-        assertThat(hForm1.zeroForm()).isEqualTo(-200.0/1100);
+        assertThat(hForm1.zeroForm()).isEqualTo(-200.0 / 1100.0);
     }
 
     @Test
-    public void testGetFirstFormDownRoundZero() {
+    public void testFirstFormDownRoundZero() {
 
         assertThat(hForm0.firstFormDownRound()).isEqualTo(0.0);
     }
 
     @Test
-    public void testGetFirstFormDownRoundNotZero() {
+    public void testFirstFormDownRoundNotZero() {
 
-        assertThat(hForm1.firstFormDownRound()).isEqualTo(-200.0/70);
+        assertThat(hForm1.firstFormDownRound()).isEqualTo(-200.0 / 70.0);
     }
+
+    @Test
+    public void testSecondFormDownRoundZero() {
+
+        assertThat(hForm0.secondFormDownRound()).isEqualTo(0.0);
+    }
+
+    @Test
+    public void testSecondFormDownRoundNotZero() {
+
+        assertThat(hForm1.secondFormDownRound()).isEqualTo(1100.0 / 70.0);
+    }
+
+    @Test
+    public void testFirstFormTopRoundZero() {
+        assertThat(hForm0.firstFormTopRound()).isEqualTo(0.0);
+    }
+
+    @Test
+    public void testFirstFormTopRoundNotZero() {
+        assertThat(hForm1.firstFormTopRound()).isEqualTo(-200.0/30.0);
+    }
+
+
 
 }
