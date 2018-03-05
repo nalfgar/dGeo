@@ -116,52 +116,56 @@ public class HFormTest {
     @Test
     public void testSecondFormTopRoundZero() {
         assertThat(hForm0.secondFormTopRound()).isEqualTo(0.0);
+    }
+
+    @Test
+    public void testSecondFormTopRoundNotZero() {
+        assertThat(hForm1.secondFormTopRound()).isEqualTo(1100.0 / 30.0);
         assertThat(hForm5.secondFormTopRound()).isEqualTo(2200.0 / (30.0 + 30.0));
     }
-//
-//    @Test
-//    public void testSecondFormTopRoundNotZero() {
-//        assertThat(hForm1.secondFormTopRound()).isEqualTo(1100.0 / 30.0);
-//    }
-//
-//    @Test
-//    public void testFirstFormBottomSquareZero() {
-//        assertThat(hForm0.firstFormBottomSquare()).isEqualTo(0.0);
-//    }
-//
-//    @Test
-//    public void testFirstFormBottomSquareNotZero() {
-//        assertThat(hForm1.firstFormBottomSquare()).isEqualTo(-200.0 / (900.0 + 1600.0));
-//    }
-//
-//    @Test
-//    public void testSeconfFormBottomSquareZero() {
-//        assertThat(hForm0.secondFormBottomSquare()).isEqualTo(0.0);
-//    }
-//
-//    @Test
-//    public void testSeconfFormBottomSquareNotZero() {
-//        assertThat(hForm1.secondFormBottomSquare()).isEqualTo(1100.0 / (900.0 + 1600.0));
-//    }
-//
-//    @Test
-//    public void testFirstFormTopSquareZero() {
-//        assertThat(hForm0.firstFormTopSquare()).isEqualTo(0.0);
-//    }
-//
-//    @Test
-//    public void testFirstFormTopSquareNotZero() {
-//        assertThat(hForm1.firstFormTopSquare()).isEqualTo(-200.0 / (100 + 400));
-//    }
-//
-//    @Test
-//    public void testSecondFormTopSquareZero() {
-//        assertThat(hForm0.secondFormTopSquare()).isEqualTo(0.0);
-//    }
-//
-//    @Test
-//    public void testSecondFormTopSquareNotZero() {
-//        assertThat(hForm1.secondFormTopSquare()).isEqualTo(1100.0/(100+400));
-//    }
+
+    @Test
+    public void testFirstFormBottomSquareZero() {
+        assertThat(hForm0.firstFormBottomSquare()).isEqualTo(0.0);
+    }
+
+    @Test
+    public void testFirstFormBottomSquareNotZero() {
+        assertThat(hForm1.firstFormBottomSquare()).isEqualTo(-200.0 / (900.0 + 1600.0));
+        assertThat(hForm5.firstFormBottomSquare()).isEqualTo(-400.0 / (900.0 + 1600.0 + 900.0 + 1600.0));
+    }
+
+    @Test
+    public void testSeconfFormBottomSquareZero() {
+        assertThat(hForm0.secondFormBottomSquare()).isEqualTo(0.0);
+    }
+
+    @Test
+    public void testSeconfFormBottomSquareNotZero() {
+        assertThat(hForm1.secondFormBottomSquare()).isEqualTo(1100.0 / (900.0 + 1600.0));
+        assertThat(hForm5.secondFormBottomSquare()).isEqualTo(2200.0 / (900.0 + 1600.0 + 900.0 + 1600.0));
+    }
+
+    @Test
+    public void testFirstFormTopSquareZero() {
+        assertThat(hForm0.firstFormTopSquare()).isEqualTo(0.0);
+    }
+
+    @Test
+    public void testFirstFormTopSquareNotZero() {
+        assertThat(hForm1.firstFormTopSquare()).isEqualTo(-200.0 / (900.0 + 1600.0));
+        assertThat(hForm5.firstFormTopSquare()).isEqualTo(-400.0 / (900.0 + 1600.0 + 900.0 + 1600.0));
+    }
+
+    @Test
+    public void testSecondFormTopSquareZero() {
+        assertThat(hForm0.secondFormTopSquare()).isEqualTo(0.0);
+    }
+
+    @Test
+    public void testSecondFormTopSquareNotZero() {
+        assertThat(hForm1.secondFormTopSquare()).isEqualTo(1100.0 / (900.0 + 1600.0));
+        assertThat(hForm5.secondFormTopSquare()).isEqualTo(2200.0 / (900.0 + 1600.0 + 900.0 + 1600.0));
+    }
 
 }

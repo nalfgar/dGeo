@@ -65,30 +65,42 @@ public class HForm {
         if (denominator == ZERO) return ZERO;
         return secondForm() / denominator;
     }
-//
-//    public double firstFormBottomSquare() {
-//        double denominator = (c * c) + (d * d);
-//        if (denominator == ZERO) return ZERO;
-//        return firstForm() / denominator;
-//    }
-//
-//    public double secondFormBottomSquare() {
-//        double denominator = (c * c) + (d * d);
-//        if (denominator == ZERO) return ZERO;
-//        return secondForm() / denominator;
-//    }
-//
-//    public double firstFormTopSquare() {
-//        double denominator = (a * a) + (b * b);
-//        if (denominator == ZERO) return ZERO;
-//        return firstForm() / denominator;
-//    }
-//
-//    public double secondFormTopSquare() {
-//        double denominator = (a * a) + (b * b);
-//        if (denominator == ZERO) return ZERO;
-//        return secondForm() / denominator;
-//    }
+
+    public double firstFormBottomSquare() {
+        double denominator = 0.0;
+        for (List<Double> form : data) {
+            denominator += ((form.get(2) * form.get(2)) + (form.get(3) * form.get(3)));
+        }
+        if (denominator == ZERO) return ZERO;
+        return firstForm() / denominator;
+    }
+
+    public double secondFormBottomSquare() {
+        double denominator = 0.0;
+        for (List<Double> form : data) {
+            denominator += ((form.get(2) * form.get(2)) + (form.get(3) * form.get(3)));
+        }
+        if (denominator == ZERO) return ZERO;
+        return secondForm() / denominator;
+    }
+
+    public double firstFormTopSquare() {
+        double denominator = 0.0;
+        for (List<Double> form : data) {
+            denominator += ((form.get(2) * form.get(2)) + (form.get(3) * form.get(3)));
+        }
+        if (denominator == ZERO) return ZERO;
+        return firstForm() / denominator;
+    }
+
+    public double secondFormTopSquare() {
+        double denominator = 0.0;
+        for (List<Double> form : data) {
+            denominator += ((form.get(2) * form.get(2)) + (form.get(3) * form.get(3)));
+        }
+        if (denominator == ZERO) return ZERO;
+        return secondForm() / denominator;
+    }
 
     public HForm(double a, double b, double c, double d) {
         List<Double> form = new ArrayList<Double>();
