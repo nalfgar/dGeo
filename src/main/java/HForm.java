@@ -33,29 +33,38 @@ public class HForm {
     public double firstFormBottomRound() {
         double denominator = 0.0;
         for (List<Double> form : data) {
-            denominator += (form.get(2) +form.get(3));
+            denominator += (form.get(2) + form.get(3));
         }
         if (denominator == ZERO) return ZERO;
         return firstForm() / denominator;
     }
-//
-//    public double secondFormBottomRound() {
-//        double denominator = c + d;
-//        if (denominator == ZERO) return ZERO;
-//        return secondForm() / denominator;
-//    }
-//
-//    public double firstFormTopRound() {
-//        double denominator = a + b;
-//        if (denominator == ZERO) return ZERO;
-//        return firstForm() / denominator;
-//    }
-//
-//    public double secondFormTopRound() {
-//        double denominator = a + b;
-//        if (denominator == ZERO) return ZERO;
-//        return secondForm() / denominator;
-//    }
+
+    public double secondFormBottomRound() {
+        double denominator = 0.0;
+        for (List<Double> form : data) {
+            denominator += (form.get(2) + form.get(3));
+        }
+        if (denominator == ZERO) return ZERO;
+        return secondForm() / denominator;
+    }
+
+    public double firstFormTopRound() {
+        double denominator = 0.0;
+        for (List<Double> form : data) {
+            denominator += (form.get(0) + form.get(1));
+        }
+        if (denominator == ZERO) return ZERO;
+        return firstForm() / denominator;
+    }
+
+    public double secondFormTopRound() {
+        double denominator = 0.0;
+        for (List<Double> form : data) {
+            denominator += (form.get(0) + form.get(1));
+        }
+        if (denominator == ZERO) return ZERO;
+        return secondForm() / denominator;
+    }
 //
 //    public double firstFormBottomSquare() {
 //        double denominator = (c * c) + (d * d);
@@ -88,7 +97,7 @@ public class HForm {
         form.add(c);
         form.add(d);
         data.add(form);
-        }
+    }
 
     public HForm(List<Double> form) {
         data.add(form);
